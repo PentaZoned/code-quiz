@@ -18,14 +18,22 @@
 
     <main>
         <h2>Coding Quiz Challenge</h2>
-
+        <h3 id="questionTitle"></h3>
+        <!--Displays at reload, disappears when quiz starts-->
         <p id="intro">
             For this quiz, you are given 100 seconds to answer all of the questions which relate to code. If you
             incorrectly answer a question, the time will be deducted by 10 seconds. You will automatically lose when you
             reach 0 seconds.
         </p>
-
+        <!--Space for question during quiz-->
+        <p id="spaceForQuestions"></p> 
+        <!--Displays at reload, disappears when quiz starts-->
         <button id="start">Start</button>
+
+        <!--Displays when the quiz starts-->
+        <button id="opt1"></button>
+        <button id="opt2"></button>
+        <button id="opt3"></button>
     </main>
     <script src="assets/script.js"></script>
 </body>
