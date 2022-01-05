@@ -17,7 +17,8 @@
     </header>
 
     <main>
-        <h2>Coding Quiz Challenge</h2>
+        <h2 id="title">Coding Quiz Challenge</h2>
+        <!--Displays quiz title when it starts-->
         <h3 id="questionTitle"></h3>
         <!--Displays at reload, disappears when quiz starts-->
         <p id="intro">
@@ -31,9 +32,11 @@
         <button id="start">Start</button>
 
         <!--Displays when the quiz starts-->
-        <button id="opt1"></button>
-        <button id="opt2"></button>
-        <button id="opt3"></button>
+        <button id="opt1" class="btnOption"></button>
+        <button id="opt2" class="btnOption"></button>
+        <button id="opt3" class="btnOption"></button>
+
+        <p id="correct"></p>
     </main>
     <script src="assets/script.js"></script>
 </body>
