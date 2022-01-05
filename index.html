@@ -17,26 +17,29 @@
     </header>
 
     <main>
+        <!--Changes when the quiz ends-->
         <h2 id="title">Coding Quiz Challenge</h2>
-        <!--Displays quiz title when it starts-->
-        <h3 id="questionTitle"></h3>
+        <!--Displays question title when it starts-->
+        <h3 id="spaceForQuestions"></h3>
         <!--Displays at reload, disappears when quiz starts-->
         <p id="intro">
-            For this quiz, you are given 100 seconds to answer all of the questions which relate to code. If you
-            incorrectly answer a question, the time will be deducted by 10 seconds. You will automatically lose when you
-            reach 0 seconds.
+            For this quiz, you are given 60 seconds to answer all of the questions which relate to code. If you
+            incorrectly answer a question, the time will be deducted by 10 seconds. The quiz will automatically end when
+            the time reaches 0 seconds.
         </p>
-        <!--Space for question during quiz-->
-        <p id="spaceForQuestions"></p> 
-        <!--Displays at reload, disappears when quiz starts-->
-        <button id="start">Start</button>
 
         <!--Displays when the quiz starts-->
-        <button id="opt1" class="btnOption"></button>
-        <button id="opt2" class="btnOption"></button>
-        <button id="opt3" class="btnOption"></button>
+        <button id="opt1"></button>
+        <button id="opt2"></button>
+        <button id="opt3"></button>
 
+        <!--Displays only when question is answered-->
         <p id="correct"></p>
+        <!--Displays at the end of the quiz-->
+        <p id="score"></p>
+
+        <!--Displays at reload, disappears when quiz starts-->
+        <button id="start">Start</button>
     </main>
     <script src="assets/script.js"></script>
 </body>
