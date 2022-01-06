@@ -22,6 +22,17 @@ The top right is the timer.
 
 * [See Live Site](https://pentazoned.github.io/code-quiz/)
 
+## Screenshots and GIF
+
+* ![Demonstration GIF](https://github.com/PentaZoned/code-quiz/tree/main/assets/gif/demonstration.gif)
+* ![Screenshot 1](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot1)
+* ![Screenshot 2](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot2)
+* ![Screenshot 3](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot3)
+* ![Screenshot 4](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot4)
+* ![Screenshot 5](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot5)
+* ![Screenshot 6](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot6)
+
+
 
 ## Authors
 

@@ -1,0 +1,69 @@
+body {
+    background-color: beige;
+}
+
+h2 {
+    font-size: 28pt;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 200px 20px 40px 20px;
+}
+
+h3 {
+    font-size: 18pt;
+    margin: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p,
+#setHighscore {
+    width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16pt;
+    line-height: 22px;
+}
+
+ul {
+    text-align: center;
+    font-size: 16pt;
+    margin: 20px;
+}
+
+/* Styling for buttons */
+#start,
+#opt1,
+#opt2,
+#opt3 {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 16px auto;
+    font-size: 13pt;
+}
+
+/* styling for the View Highscore text */
+#viewHighscore {
+    font-size: 20pt;
+    font-family: sans-serif;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: underline;
+}
+
+#viewHighscore:hover {
+    color: blue;
+}
+
+/* Styling for the timer */
+#time {
+    font-size: 20pt;
+    font-family: sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
