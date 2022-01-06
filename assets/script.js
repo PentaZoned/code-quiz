@@ -2,7 +2,7 @@
 // and goes up from there
 
 // references for document elements
-const highscore = document.getElementById("highscore");
+const viewHS = document.getElementById("viewHighscore");
 const time = document.getElementById("time");
 const intro = document.getElementById("intro");
 const start = document.getElementById("start");
@@ -13,6 +13,11 @@ const option2 = document.getElementById("opt2");
 const option3 = document.getElementById("opt3");
 const correctAns = document.getElementById("correct");
 const quizScore = document.getElementById("score");
+
+const scoreBoard = document.getElementById("scoreboard");
+const setInitials = document.getElementById("set-initials");
+const orderedScore = document.getElementById("ordered-score");
+const setHS = document.getElementById("setHighscore");
 
 // Array of questions, options, and the correct answer
 const codingQuestions = [{
@@ -42,11 +47,101 @@ var initialTime = 60;
 // Question index
 var numQuestion = 0;
 
+// array that stores initials for highscores
+var highScore = [];
+
+var newScore;
+
 var startTimer;
 // Defaults the option buttons to not appear
 option1.setAttribute("style", "display:none");
 option2.setAttribute("style", "display:none");
 option3.setAttribute("style", "display:none");
+
+setHS.setAttribute("style", "display:none");
+
+// function renders the score on the stream
+function renderScore() {
+    // defaults the contents to an empty string
+    orderedScore.innerHTML = "";
+
+    // loop each element of the array and displays them
+    for (var i = 0; i < highScore.length; i++) {
+        var highSC = highScore[i];
+
+        var li = document.createElement("li");
+        li.textContent = highSC;
+        // appends the list onto the
+        orderedScore.append(li);
+    }
+}
+
+// function parses the stored string into a usuable JS object
+function parseScore() {
+    var storedScore = JSON.parse(localStorage.getItem("highScore"));
+
+    // sets the initial array to the the stored local storage object
+    if (storedScore !== null) {
+        highScore = storedScore;
+    }
+    // renders the initials
+    renderScore();
+}
+
+// converts the array of highscore initials into a JSON string
+function storeHS() {
+    localStorage.setItem("highScore", JSON.stringify(highScore));
+}
+
+// sets an event listener to when the user presses submit
+setHS.addEventListener("submit", function(event) {
+    // prevents the default action of the event listener
+    event.preventDefault();
+    // trims and uppercase any lowercase input
+    var upperInit = setInitials.value.trim().toUpperCase();
+    // set the initials to a local variable
+    var highscoreText = upperInit + ": " + newScore;
+    // If the input is an empty string, exit out of this function
+    if (highscoreText === "") {
+        return;
+    }
+    // Add the initials to the end of the array
+    highScore.push(highscoreText);
+    // Reset the value for the next input
+    setInitials.value = "";
+
+    // stores the initials in local storage
+    storeHS();
+    // renders the initials on the webpage
+    renderScore();
+})
+
+// Function removes the quiz question and answers and shows a finish screen with score
+function endQuiz() {
+    // Removes the questions, answers, and correct/incorrect message elements from the browser
+    spaceQ.setAttribute("style", "display:none");
+    option1.setAttribute("style", "display:none");
+    option2.setAttribute("style", "display:none");
+    option3.setAttribute("style", "display:none");
+    correctAns.setAttribute("style", "display:none");
+    // Displays the option to submit the high score and initial
+    setHS.setAttribute("style", "display:visible");
+    scoreBoard.setAttribute("style", "display:visible");
+    orderedScore.setAttribute("style", "display:visible");
+    // Stops the timer when the quiz is complete
+    clearInterval(startTimer);
+    // Message displays when quiz ends
+    title.textContent = "The Code Quiz Ended!";
+    scoreBoard.textContent = "Highscores";
+
+    //Sets and shows the time left as the score
+    quizScore.setAttribute("style", "display:visible");
+    newScore = initialTime;
+    quizScore.textContent = "Your score: " + newScore;
+    parseScore();
+    // Function enables the user to try the quiz again
+    restartQuiz();
+}
 
 // Function resets the start button and initial question and time values
 function restartQuiz() {
@@ -61,26 +156,6 @@ function restartQuiz() {
     start.addEventListener("click", startQuiz);
 }
 
-// Function removes the quiz question and answers and shows a finish screen with score
-function endQuiz() {
-    // Removes the questions, answers, and correct/incorrect message elements from the browser
-    spaceQ.setAttribute("style", "display:none");
-    option1.setAttribute("style", "display:none");
-    option2.setAttribute("style", "display:none");
-    option3.setAttribute("style", "display:none");
-    correctAns.setAttribute("style", "display:none");
-
-    // Stops the timer when the quiz is complete
-    clearInterval(startTimer);
-    // Message displays when quiz ends
-    title.textContent = "The Code Quiz Ended!";
-
-    //Sets and shows the time left as the score
-    quizScore.setAttribute("style", "display:visible");
-    quizScore.textContent = "Your score: " + initialTime;
-    // Function enables the user to try the quiz again
-    restartQuiz();
-}
 
 // This function compares user selected answer with the answer element in the array
 function checkAnswer(event) {
@@ -137,10 +212,13 @@ function getQuestion() {
 
 // Function resets elements, starts timer, displays time remaining or end screen
 function startQuiz() {
-    // Removes intro text, start button, and previous shown quiz score if shown
+    // Removes intro text, start button, previous shown quiz score, submission bos if shown
     intro.setAttribute("style", "display:none");
     start.setAttribute("style", "display:none");
     quizScore.setAttribute("style", "display:none");
+    setHS.setAttribute("style", "display:none");
+    scoreBoard.setAttribute("style", "display:none");
+    orderedScore.setAttribute("style", "display:none");
 
     // Enables the HTML element to display the question
     spaceQ.setAttribute("style", "display:visible");

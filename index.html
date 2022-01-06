@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <span id="highscore">View Highscore</span>
+        <span id="viewHighscore">View Highscore</span>
         <span id="time">Time: 0</span>
     </header>
 
@@ -33,10 +33,19 @@
         <button id="opt2"></button>
         <button id="opt3"></button>
 
+        <!--Displays at the end of the quiz-->
+        <h3 id="score"></h3>
+
         <!--Displays only when question is answered-->
         <p id="correct"></p>
-        <!--Displays at the end of the quiz-->
-        <p id="score"></p>
+
+        <form id="setHighscore">
+            <label for="set-initials">Initials:</label>
+            <input type="text" name="set-initials" id="set-initials" />
+            <input type="submit" value="Submit" />
+        </form>
+        <h3 id="scoreboard"></h3>
+        <ol id="ordered-score"></ol>
 
         <!--Displays at reload, disappears when quiz starts-->
         <button id="start">Start</button>
