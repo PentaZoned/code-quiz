@@ -11,7 +11,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20pt;
+    font-size: 18pt;
     margin: 20px;
     text-align: center;
     font-family: sans-serif;
@@ -27,43 +27,43 @@ p,
     line-height: 22px;
 }
 
-ol {
+ul {
     text-align: center;
     font-size: 16pt;
     margin: 20px;
 }
 
+/* Styling for buttons */
 #start,
 #opt1,
 #opt2,
-#opt3,
-#resetHS {
+#opt3 {
     display: flex;
     justify-content: center;
     width: auto;
-    margin: 20px auto;
-    font-size: 20pt;
+    margin: 16px auto;
+    font-size: 13pt;
 }
 
+/* styling for the View Highscore text */
 #viewHighscore {
-    font-size: 28pt;
+    font-size: 20pt;
     font-family: sans-serif;
     position: absolute;
     top: 10px;
     left: 10px;
+    text-decoration: underline;
 }
 
+#viewHighscore:hover {
+    color: blue;
+}
+
+/* Styling for the timer */
 #time {
-    font-size: 28pt;
+    font-size: 20pt;
     font-family: sans-serif;
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-#opt1,
-#opt2,
-#opt3 {
-    margin: 16px auto;
-    font-size: 16pt;
 }

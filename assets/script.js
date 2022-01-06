@@ -50,8 +50,10 @@ var numQuestion = 0;
 // array that stores initials for highscores
 var highScore = [];
 
+// a placeholder for displaying score
 var newScore;
 
+// to declare the timer
 var startTimer;
 // Defaults the option buttons to not appear
 option1.setAttribute("style", "display:none");
@@ -116,12 +118,29 @@ setHS.addEventListener("submit", function(event) {
     renderScore();
 })
 
+viewHS.addEventListener("click", viewHighScore);
+
+// function goes to the highscore screen
 function viewHighScore() {
+    // removes the unnecessary HTML elements
     quizScore.setAttribute("style", "display:none");
     setHS.setAttribute("style", "display:none");
+    intro.setAttribute("style", "display:none");
+    spaceQ.setAttribute("style", "display:none");
+    option1.setAttribute("style", "display:none");
+    option2.setAttribute("style", "display:none");
+    option3.setAttribute("style", "display:none");
+    correctAns.setAttribute("style", "display:none");
+
+    // makes the highscore info visible
     orderedScore.setAttribute("style", "display:visible");
     scoreBoard.setAttribute("style", "display:visible");
+    start.setAttribute("style", "display:visible");
     title.textContent = "Highscores";
+
+    // stops the timer if it starts
+    clearInterval(startTimer);
+
 }
 
 // Function removes the quiz question and answers and shows a finish screen with score
