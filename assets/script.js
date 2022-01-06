@@ -18,6 +18,7 @@ const scoreBoard = document.getElementById("scoreboard");
 const setInitials = document.getElementById("set-initials");
 const orderedScore = document.getElementById("ordered-score");
 const setHS = document.getElementById("setHighscore");
+const resetScoreBoard = document.getElementById("resetHS");
 
 // Array of questions, options, and the correct answer
 const codingQuestions = [{
@@ -57,7 +58,7 @@ var startTimer;
 option1.setAttribute("style", "display:none");
 option2.setAttribute("style", "display:none");
 option3.setAttribute("style", "display:none");
-
+resetScoreBoard.setAttribute("style", "display:none");
 setHS.setAttribute("style", "display:none");
 
 // function renders the score on the stream
@@ -97,6 +98,7 @@ function storeHS() {
 setHS.addEventListener("submit", function(event) {
     // prevents the default action of the event listener
     event.preventDefault();
+    viewHighScore();
     // trims and uppercase any lowercase input
     var upperInit = setInitials.value.trim().toUpperCase();
     // set the initials to a local variable
@@ -116,6 +118,16 @@ setHS.addEventListener("submit", function(event) {
     renderScore();
 })
 
+function viewHighScore() {
+    quizScore.setAttribute("style", "display:none");
+    setHS.setAttribute("style", "display:none");
+    orderedScore.setAttribute("style", "display:visible");
+    scoreBoard.setAttribute("style", "display:visible");
+    resetScoreBoard.setAttribute("style", "display:visible");
+    resetScoreBoard.textContent = "Clear highscores";
+    title.textContent = "Highscores";
+}
+
 // Function removes the quiz question and answers and shows a finish screen with score
 function endQuiz() {
     // Removes the questions, answers, and correct/incorrect message elements from the browser
@@ -126,13 +138,10 @@ function endQuiz() {
     correctAns.setAttribute("style", "display:none");
     // Displays the option to submit the high score and initial
     setHS.setAttribute("style", "display:visible");
-    scoreBoard.setAttribute("style", "display:visible");
-    orderedScore.setAttribute("style", "display:visible");
     // Stops the timer when the quiz is complete
     clearInterval(startTimer);
     // Message displays when quiz ends
     title.textContent = "The Code Quiz Ended!";
-    scoreBoard.textContent = "Highscores";
 
     //Sets and shows the time left as the score
     quizScore.setAttribute("style", "display:visible");
@@ -219,10 +228,13 @@ function startQuiz() {
     setHS.setAttribute("style", "display:none");
     scoreBoard.setAttribute("style", "display:none");
     orderedScore.setAttribute("style", "display:none");
+    resetScoreBoard.setAttribute("style", "display:none");
 
     // Enables the HTML element to display the question
     spaceQ.setAttribute("style", "display:visible");
-
+    
+    // Defaults the title
+    title.textContent = "Coding Quiz Challenge";
     // set the interval at which the time is decrementing, displays time remaining, or the end screen
     startTimer = setInterval(function () {
 

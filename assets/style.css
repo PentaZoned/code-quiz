@@ -36,11 +36,12 @@ ol {
 #start,
 #opt1,
 #opt2,
-#opt3 {
+#opt3,
+#resetHS {
     display: flex;
     justify-content: center;
     width: auto;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 20pt;
 }
 
