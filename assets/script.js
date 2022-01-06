@@ -18,7 +18,6 @@ const scoreBoard = document.getElementById("scoreboard");
 const setInitials = document.getElementById("set-initials");
 const orderedScore = document.getElementById("ordered-score");
 const setHS = document.getElementById("setHighscore");
-const resetScoreBoard = document.getElementById("resetHS");
 
 // Array of questions, options, and the correct answer
 const codingQuestions = [{
@@ -58,7 +57,6 @@ var startTimer;
 option1.setAttribute("style", "display:none");
 option2.setAttribute("style", "display:none");
 option3.setAttribute("style", "display:none");
-resetScoreBoard.setAttribute("style", "display:none");
 setHS.setAttribute("style", "display:none");
 
 // function renders the score on the stream
@@ -123,8 +121,6 @@ function viewHighScore() {
     setHS.setAttribute("style", "display:none");
     orderedScore.setAttribute("style", "display:visible");
     scoreBoard.setAttribute("style", "display:visible");
-    resetScoreBoard.setAttribute("style", "display:visible");
-    resetScoreBoard.textContent = "Clear highscores";
     title.textContent = "Highscores";
 }
 
@@ -228,7 +224,6 @@ function startQuiz() {
     setHS.setAttribute("style", "display:none");
     scoreBoard.setAttribute("style", "display:none");
     orderedScore.setAttribute("style", "display:none");
-    resetScoreBoard.setAttribute("style", "display:none");
 
     // Enables the HTML element to display the question
     spaceQ.setAttribute("style", "display:visible");
