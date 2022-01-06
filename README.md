@@ -1,37 +1,16 @@
 # code-quiz
 
-One paragraph of project description goes here.
+This project is focused on practicing coding assessments that are most often in job interviews.
 
-## Getting Started
+The prompt is to create a timed quiz using HTML, CSS, and JavaScript. The user should be able to complete the quiz and submit their initials to record their score.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Upon loading the server, the user is shown an introduction to the code quiz with a title and instructions to start the quiz. When the user presses the 'start' button, they are prompted with a coding question with options to choose from for the answers. The timer will start at 60 seconds and count down. When they select an answer, a statement will display indicating whether or not it's correct or incorrect. If incorrect, the time is reduced by 10 seconds. Regardless of answer, the prompt will transition to the next set of question and options.
 
-### Prerequisites
+When the last question is answered or when the time reaches 0, the timer will stop and the screen will transition to the results screen. The score is the remaining time left, and the user will have the option to save both their score and their initials or they can attempt the quiz again. Once submitted, the screen will transition to the highscores where the score is recorded along with any previous scores recorded. There is also the option to attempt the quiz again from this screen.
 
-What things you need to install the software and how to install them.
+The top left is where the words 'View Highscore' is at, and this is a clickable event listener that will lead the user to the highscore screen.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development environment running.
-
-Say what the step will be:
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
+The top right is the timer.
 
 ## Built With
 
@@ -41,18 +20,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://pentazoned.github.io/code-quiz/)
 
 
 ## Authors
 
-* **YOUR NAME** 
+* **Bradley Le** 
 
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- [Link to Portfolio Site](https://pentazoned.github.io/portfolio-1/)
+- [Link to Github](https://github.com/PentaZoned)
+- [Link to LinkedIn](https://www.linkedin.com/in/bradley-le-/)
 
 ## License
 
@@ -60,6 +37,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
+I appreciate my instructor and Teacher Assistants for assisting my peers and I with any issues we've come across.
