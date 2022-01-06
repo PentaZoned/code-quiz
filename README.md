@@ -25,12 +25,12 @@ The top right is the timer.
 ## Screenshots and GIF
 
 * ![Demonstration GIF](https://github.com/PentaZoned/code-quiz/blob/main/assets/gif/demonstration.gif)
-* ![Screenshot 1](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot1.jpg)
-* ![Screenshot 2](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot2.jpg)
-* ![Screenshot 3](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot3.jpg)
-* ![Screenshot 4](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot4.jpg)
-* ![Screenshot 5](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot5.jpg)
-* ![Screenshot 6](https://github.com/PentaZoned/code-quiz/tree/main/assets/images/screenshot6.jpg)
+* ![Screenshot 1](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot1.jpg)
+* ![Screenshot 2](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot2.jpg)
+* ![Screenshot 3](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot3.jpg)
+* ![Screenshot 4](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot4.jpg)
+* ![Screenshot 5](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot5.jpg)
+* ![Screenshot 6](https://github.com/PentaZoned/code-quiz/blob/main/assets/images/screenshot6.jpg)
 
 
 
